@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GOActive App</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #F3E4C9;
+      color: #0D1B2A;
+    }
+    .app {
+      max-width: 430px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background: #F3E4C9;
+      display: flex;
+      flex-direction: column;
+      border-left: 1px solid #dccfb7;
+      border-right: 1px solid #dccfb7;
+    }
+    .topbar {
+      padding: 20px;
+      background: #0D1B2A;
+      color: #F3E4C9;
+    }
+    .topbar h1 {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+    .topbar p {
+      margin-top: 8px;
+      color: #BABF94;
+      font-size: 14px;
+    }
+    .hero {
+      padding: 20px;
+      background: #0D1B2A;
+    }
+    .hero-card {
+      background: linear-gradient(135deg, #BABF94, #BFA28C);
+      color: #0D1B2A;
+      border-radius: 20px;
+      padding: 22px;
+    }
+    .hero-card h2 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+    .hero-card p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    .cta {
+      background: #0D1B2A;
+      color: #F3E4C9;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .section {
+      padding: 20px;
+    }
+    .section h3 {
+      font-size: 18px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .cards {
+      display: grid;
+      gap: 12px;
+    }
+    .card {
+      background: #fff7ea;
+      border: 1px solid #e2d5bd;
+      border-radius: 16px;
+      padding: 16px;
+    }
+    .card h4 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+    .card p {
+      font-size: 13px;
+      color: #5c5b57;
+      line-height: 1.5;
+    }
+    .badge {
+      display: inline-block;
+      margin-top: 10px;
+      background: #0D1B2A;
+      color: #F3E4C9;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .nav {
+      margin-top: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: #0D1B2A;
+      color: #F3E4C9;
+      position: sticky;
+      bottom: 0;
+    }
+    .nav button {
+      background: transparent;
+      color: #F3E4C9;
+      border: none;
+      padding: 16px 8px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .screen { display: none; }
+    .screen.active { display: block; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="topbar">
+      <h1>GOActive</h1>
+      <p>Move Freely. Live Fully.</p>
+    </div>
+
+    <div id="home" class="screen active">
+      <div class="hero">
+        <div class="hero-card">
+          <h2>Bonjour Maeva</h2>
+          <p>Ton app sportive pour Marseille. Recommandations locales, planning intelligent et motivation sociale.</p>
+          <button class="cta">Voir ma session du jour</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Session recommandée</h3>
+        <div class="cards">
+          <div class="card">
+            <h4>Running Corniche</h4>
+            <p>35 min · Intensité modérée · Idéal avec la météo du jour.</p>
+            <span class="badge">Outdoor</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Activités populaires</h3>
+        <div class="cards">
+          <div class="card"><h4>Yoga plage</h4><p>Session douce au lever du soleil, idéale pour récupérer.</p></div>
+          <div class="card"><h4>Padel</h4><p>Parfait pour jouer à deux ou quatre après le travail.</p></div>
+          <div class="card"><h4>Trail Calanques</h4><p>Pour les utilisateurs qui veulent un effort plus intense et un spot fort.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="planning" class="screen">
+      <div class="section">
+        <h3>Planning hebdo</h3>
+        <div class="cards">
+          <div class="card"><h4>Lundi</h4><p>Pilates · 19h00 · 45 min</p></div>
+          <div class="card"><h4>Mercredi</h4><p>Running Corniche · 18h30 · 35 min</p></div>
+          <div class="card"><h4>Samedi</h4><p>Paddle sunset · 18h00 · 60 min</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="community" class="screen">
+      <div class="section">
+        <h3>Communauté</h3>
+        <div class="cards">
+          <div class="card">
+            <h4>Groupe Padel Prado</h4>
+            <p>6 membres actifs · Niveau intermédiaire · Session prévue jeudi.</p>
+          </div>
+          <div class="card">
+            <h4>Morning Run Marseille</h4>
+            <p>12 membres · Départ 7h30 · Parcours Corniche.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="profile" class="screen">
+      <div class="section">
+        <h3>Mon profil</h3>
+        <div class="cards">
+          <div class="card"><h4>Objectif</h4><p>Bouger 3 fois par semaine et varier les sports outdoor.</p></div>
+          <div class="card"><h4>Préférences</h4><p>Running, yoga, paddle, padel.</p></div>
+          <div class="card"><h4>Disponibilités</h4><p>Semaine après 18h · Week-end matin et sunset.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav">
+      <button onclick="showScreen('home')">Accueil</button>
+      <button onclick="showScreen('planning')">Planning</button>
+      <button onclick="showScreen('community')">Communauté</button>
+      <button onclick="showScreen('profile')">Profil</button>
+    </div>
+  </div>
+
+  <script>
+    function showScreen(id) {
+      document.querySelectorAll('.screen').forEach(screen => {
+        screen.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
