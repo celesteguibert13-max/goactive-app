@@ -6,11 +6,13 @@
   <title>GOActive App</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       font-family: Arial, sans-serif;
       background: #F3E4C9;
       color: #0D1B2A;
     }
+
     .app {
       max-width: 430px;
       margin: 0 auto;
@@ -21,40 +23,64 @@
       border-left: 1px solid #dccfb7;
       border-right: 1px solid #dccfb7;
     }
+
     .topbar {
       padding: 20px;
       background: #0D1B2A;
       color: #F3E4C9;
     }
-    .topbar h1 {
-      font-size: 28px;
-      font-weight: 900;
-      letter-spacing: 1px;
+
+    .logo-zone {
+      background: #F3E4C9;
+      padding: 12px 16px;
+      border-radius: 14px;
+      display: inline-block;
+      margin-bottom: 14px;
     }
+
+    .logo-img {
+      height: 44px;
+      width: auto;
+      display: block;
+      background: #F3E4C9;
+    }
+
     .topbar p {
-      margin-top: 8px;
+      margin-top: 4px;
       color: #BABF94;
       font-size: 14px;
     }
+
+    .hero-cover {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
     .hero {
       padding: 20px;
       background: #0D1B2A;
     }
+
     .hero-card {
       background: linear-gradient(135deg, #BABF94, #BFA28C);
       color: #0D1B2A;
       border-radius: 20px;
       padding: 22px;
     }
+
     .hero-card h2 {
       font-size: 24px;
       margin-bottom: 8px;
     }
+
     .hero-card p {
       font-size: 14px;
       line-height: 1.5;
       margin-bottom: 16px;
     }
+
     .cta {
       background: #0D1B2A;
       color: #F3E4C9;
@@ -64,34 +90,51 @@
       font-weight: bold;
       cursor: pointer;
     }
+
     .section {
       padding: 20px;
     }
+
     .section h3 {
       font-size: 18px;
       margin-bottom: 14px;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
+
     .cards {
       display: grid;
       gap: 12px;
     }
+
     .card {
       background: #fff7ea;
       border: 1px solid #e2d5bd;
       border-radius: 16px;
       padding: 16px;
+      overflow: hidden;
     }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
     .card h4 {
       font-size: 16px;
       margin-bottom: 6px;
     }
+
     .card p {
       font-size: 13px;
       color: #5c5b57;
       line-height: 1.5;
     }
+
     .badge {
       display: inline-block;
       margin-top: 10px;
@@ -103,6 +146,7 @@
       letter-spacing: 1px;
       text-transform: uppercase;
     }
+
     .nav {
       margin-top: auto;
       display: grid;
@@ -112,6 +156,7 @@
       position: sticky;
       bottom: 0;
     }
+
     .nav button {
       background: transparent;
       color: #F3E4C9;
@@ -120,6 +165,7 @@
       font-size: 12px;
       cursor: pointer;
     }
+
     .screen { display: none; }
     .screen.active { display: block; }
   </style>
@@ -127,11 +173,15 @@
 <body>
   <div class="app">
     <div class="topbar">
-      <h1>GOActive</h1>
+      <div class="logo-zone">
+        <img src="logo.png" alt="GOActive" class="logo-img">
+      </div>
       <p>Move Freely. Live Fully.</p>
     </div>
 
     <div id="home" class="screen active">
+      <img src="calanques.jpg" alt="Marseille Calanques" class="hero-cover">
+
       <div class="hero">
         <div class="hero-card">
           <h2>Bonjour Maeva</h2>
@@ -144,6 +194,7 @@
         <h3>Session recommandée</h3>
         <div class="cards">
           <div class="card">
+            <img src="running corniche.jpg" alt="Running Corniche">
             <h4>Running Corniche</h4>
             <p>35 min · Intensité modérée · Idéal avec la météo du jour.</p>
             <span class="badge">Outdoor</span>
@@ -154,9 +205,41 @@
       <div class="section">
         <h3>Activités populaires</h3>
         <div class="cards">
-          <div class="card"><h4>Yoga plage</h4><p>Session douce au lever du soleil, idéale pour récupérer.</p></div>
-          <div class="card"><h4>Padel</h4><p>Parfait pour jouer à deux ou quatre après le travail.</p></div>
-          <div class="card"><h4>Trail Calanques</h4><p>Pour les utilisateurs qui veulent un effort plus intense et un spot fort.</p></div>
+          <div class="card">
+            <img src="yoga.jpg" alt="Yoga plage">
+            <h4>Yoga plage</h4>
+            <p>Session douce au lever du soleil, idéale pour récupérer.</p>
+          </div>
+
+          <div class="card">
+            <img src="padel.jpg" alt="Padel">
+            <h4>Padel</h4>
+            <p>Parfait pour jouer à deux ou quatre après le travail.</p>
+          </div>
+
+          <div class="card">
+            <img src="trail.png" alt="Trail Calanques">
+            <h4>Trail Calanques</h4>
+            <p>Pour les utilisateurs qui veulent un effort plus intense et un spot fort.</p>
+          </div>
+
+          <div class="card">
+            <img src="paddle.jpg" alt="Paddle">
+            <h4>Paddle sunset</h4>
+            <p>Une session mer et coucher de soleil pour finir la journée dehors.</p>
+          </div>
+
+          <div class="card">
+            <img src="surf.jpg" alt="Surf">
+            <h4>Surf Prado</h4>
+            <p>Quand les conditions sont bonnes, l'app peut te proposer une session glisse.</p>
+          </div>
+
+          <div class="card">
+            <img src="pilates.jpg" alt="Pilates">
+            <h4>Pilates</h4>
+            <p>Parfait pour renforcer le centre du corps et récupérer intelligemment.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -165,9 +248,23 @@
       <div class="section">
         <h3>Planning hebdo</h3>
         <div class="cards">
-          <div class="card"><h4>Lundi</h4><p>Pilates · 19h00 · 45 min</p></div>
-          <div class="card"><h4>Mercredi</h4><p>Running Corniche · 18h30 · 35 min</p></div>
-          <div class="card"><h4>Samedi</h4><p>Paddle sunset · 18h00 · 60 min</p></div>
+          <div class="card">
+            <img src="pilates.jpg" alt="Pilates">
+            <h4>Lundi</h4>
+            <p>Pilates · 19h00 · 45 min</p>
+          </div>
+
+          <div class="card">
+            <img src="running corniche.jpg" alt="Running Corniche">
+            <h4>Mercredi</h4>
+            <p>Running Corniche · 18h30 · 35 min</p>
+          </div>
+
+          <div class="card">
+            <img src="paddle.jpg" alt="Paddle sunset">
+            <h4>Samedi</h4>
+            <p>Paddle sunset · 18h00 · 60 min</p>
+          </div>
         </div>
       </div>
     </div>
@@ -177,12 +274,21 @@
         <h3>Communauté</h3>
         <div class="cards">
           <div class="card">
+            <img src="padel.jpg" alt="Groupe Padel Prado">
             <h4>Groupe Padel Prado</h4>
             <p>6 membres actifs · Niveau intermédiaire · Session prévue jeudi.</p>
           </div>
+
           <div class="card">
+            <img src="running corniche.jpg" alt="Morning Run Marseille">
             <h4>Morning Run Marseille</h4>
             <p>12 membres · Départ 7h30 · Parcours Corniche.</p>
+          </div>
+
+          <div class="card">
+            <img src="beachvolley.jpg" alt="Beach Volley Marseille">
+            <h4>Beach Volley Marseille</h4>
+            <p>Sessions en groupe au bord de mer avec niveaux variés.</p>
           </div>
         </div>
       </div>
@@ -192,9 +298,23 @@
       <div class="section">
         <h3>Mon profil</h3>
         <div class="cards">
-          <div class="card"><h4>Objectif</h4><p>Bouger 3 fois par semaine et varier les sports outdoor.</p></div>
-          <div class="card"><h4>Préférences</h4><p>Running, yoga, paddle, padel.</p></div>
-          <div class="card"><h4>Disponibilités</h4><p>Semaine après 18h · Week-end matin et sunset.</p></div>
+          <div class="card">
+            <img src="yoga.jpg" alt="Objectif">
+            <h4>Objectif</h4>
+            <p>Bouger 3 fois par semaine et varier les sports outdoor.</p>
+          </div>
+
+          <div class="card">
+            <img src="paddle.jpg" alt="Préférences">
+            <h4>Préférences</h4>
+            <p>Running, yoga, paddle, padel.</p>
+          </div>
+
+          <div class="card">
+            <img src="natation.jpg" alt="Disponibilités">
+            <h4>Disponibilités</h4>
+            <p>Semaine après 18h · Week-end matin et sunset.</p>
+          </div>
         </div>
       </div>
     </div>
